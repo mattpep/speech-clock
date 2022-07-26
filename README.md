@@ -7,7 +7,7 @@ minimum and maximum durations, and will turn red once the maximum has been
 reached. 30 seconds later the background will blink.
 
 # License
-<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Presentation Clock</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/mattpep/tm-clock" property="cc:attributionName" rel="cc:attributionURL">Matt Peperell</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>. 
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Presentation Clock</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/mattpep/speech-clock" property="cc:attributionName" rel="cc:attributionURL">Matt Peperell</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
 
 You are free to use this when practicing or in speaking club meetings.
 
