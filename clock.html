@@ -282,6 +282,12 @@
         element.innerHTML = ms.m + ":" + ms.s;
       }
 
+      document.addEventListener('keyup', function(e) {
+        // console.log(e.key);
+        if(e.key == 'PageUp') start();
+        if(e.key == 'PageDown') pause();
+        if(e.key == 'b') {stop(); reset();}
+      });
   </script>
 </head>
 <body>
