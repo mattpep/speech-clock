@@ -113,8 +113,8 @@
           return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
 
-        max = parseInt(getParameterByName('max')) || 120;
-        min = parseInt(getParameterByName('min')) || 60;
+        max = parseInt(getParameterByName('max')) || 300;
+        min = parseInt(getParameterByName('min')) || 0;
 
       function secondsToMinsAndSeconds(s) {
         var secs = s % 60;
