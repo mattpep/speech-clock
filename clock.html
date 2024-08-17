@@ -61,6 +61,33 @@
         font-weight: bold;
       }
 
+      #limits .min {
+        color: green;
+      }
+      #limits .min::before {
+        content: "Minimum: ";
+      }
+      #limits .mid {
+        color: yellow;
+      }
+      #limits .mid::before {
+        content: "Mid-point: ";
+      }
+      #limits .max {
+        color: red;
+      }
+      #limits .max::before {
+        content: "Maximum: ";
+      }
+      #limits .hard {
+        color:  red;
+        font-weight: bold;
+        text-transform:	uppercase;
+      }
+      #limits .hard::before {
+        content: "Hard stop: ";
+      }
+
     </style>
     <script>
       var blinky = false;
@@ -219,6 +246,25 @@
         min = parseInt(document.getElementById('min_dur').value)
         max = parseInt(document.getElementById('max_dur').value)
         close_config();
+        update_limits_legend();
+      }
+
+      function update_limits_legend() {
+        var element = document.querySelectorAll('#limits .min')[0];
+        var ms = secondsToMinsAndSeconds(min);
+        element.innerHTML = ms.m + ":" + ms.s;
+
+        element = document.querySelectorAll('#limits .max')[0];
+        ms = secondsToMinsAndSeconds(max);
+        element.innerHTML = ms.m + ":" + ms.s;
+
+        element = document.querySelectorAll('#limits .mid')[0];
+        ms = secondsToMinsAndSeconds((min+max)/2);
+        element.innerHTML = ms.m + ":" + ms.s;
+
+        element = document.querySelectorAll('#limits .hard')[0];
+        ms = secondsToMinsAndSeconds(max+30);
+        element.innerHTML = ms.m + ":" + ms.s;
       }
 
   </script>
@@ -236,6 +282,7 @@
       <input id="reset" type="button" value="reset" onclick="reset()" />
       <input id="stop" type="button" value="stop" onclick="stop()" />
       <a href="javascript:void(0)" onclick="configure();">+</a>
+      <span id="limits"><span class="min">0:00</span>, <span class="mid">2:30</span>, <span class="max">5:00</span>, <span class="hard">5:30</span></span>
     </div>
   </div>
   <div id="configure">
