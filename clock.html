@@ -92,6 +92,7 @@
     <script>
       var blinky = false;
       var ticker;
+      var running = false;
       var alarm;
       var elapsed = 0;
       var min;
@@ -205,17 +206,31 @@
       }
 
       function start() {
+        if (running) {
+          console.log('Already running');
+          return;
+        }
+        running = true;
         ticker = setInterval(tick, 1000);
         var start_button = document.getElementById('start');
         start_button.disabled = true;
       }
 
       function stop() {
+        running = false;
         clearInterval(ticker);
         var start_button = document.getElementById('start');
         start_button.disabled = false;
         if (alarm != null) {
           reset()
+        }
+      }
+
+      function pause() {
+        if (running) {
+          stop();
+        } else {
+          start();
         }
       }
 
