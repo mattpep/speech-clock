@@ -145,7 +145,11 @@
           fs_element.style.backgroundColor = 'white';
           elapsed_element.style.color = 'gray';
         }
+        if (!running) {
+          elapsed_element.style.color = '#888';
+        }
       }
+
       function paint() {
         var fs_element = document.getElementById('fullscreen');
         var elapsed_element = document.getElementById('elapsed');
@@ -224,6 +228,7 @@
         if (alarm != null) {
           reset()
         }
+        paint()
       }
 
       function pause() {
@@ -232,6 +237,7 @@
         } else {
           start();
         }
+        paint()
       }
 
       function reset() {
